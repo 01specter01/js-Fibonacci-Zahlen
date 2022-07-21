@@ -29,10 +29,11 @@ getAllFibonacciNumbersBelow(10) -> [0, 1, 1, 2, 3, 5, 8]
 getAllFibonacciNumbersBelow(50) -> [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 getAllFibonacciNumbersBelow(144) -> [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 */
-
+let array = [];
 function getAllFibonacciNumbersBelow(num) {
     console.log(`---------Teil-B--------`);
-    for (let i = 0; i < num; i - 1) {}
-    return Array();
+    for (let i = 0; i < num; i++) {
+        return array.push(i);
+    }
 }
 console.log(getAllFibonacciNumbersBelow(10));
