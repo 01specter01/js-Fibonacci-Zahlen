@@ -138,7 +138,6 @@ function getRandom() {
 // 3. useCapitalLetters, ein boolean, gibt an ob das Passwort große Buchstaben von A-Z enthalten soll
 // 4. useSpecialCharacters, ein boolean, gibt an ob das Passwort Sonderzeichen wie @ ! $ % & * enthalten soll.
 
-
 // function createPassword(
 //     length,
 //     useSmallLetters,
@@ -172,31 +171,117 @@ function getRandom() {
 
 // console.log(getRandom());
 
-function createPassword(length) {
-    console.log(`---------------Q2----------------`);
-    let result = "";
-    let characters = "Almnopq@";
-    for (let i = 0; i < length; i++) {
-        result += characters.charAt(
-            Math.floor(Math.random() * characters.length)
-        );
-    }
-    console.log(true);
-    return result;
-}
+// function createPassword(length) {
+//     console.log(`---------------Q2----------------`);
+//     let result = "";
+//     let characters = "Almnopq@";
+//     for (let i = 0; i < length; i++) {
+//         result += characters.charAt(
+//             Math.floor(Math.random() * characters.length)
+//         );
+//     }
+//     console.log(true);
+//     return result;
+
 /////////////////////
 //__________ERSTELLEN 4 FUNCTIONS LENGTH ALS ERSTE, JEWEILS 3 CHARACTERS ERSTELLEN RANDOM UND AM SCHLUSS ZUSAMMENFÜGEN DAS ALLE 3 CARACTERVARIANTEN VERFÜGT UND LENGTH ZB AUF 9 EINGEHALTEN IST!!!!!!!!!!!!!!!!
 /////////////////
-console.log(createPassword(8));
+// console.log(createPassword(8));
 
-function 
+// function createPassword(length) {
+//     let arrayOfElements;
+//     for (let i = 0; i < createPassword.length; i++) {}
+//     console.log(`---------------Q2----------------`);
+// }
+// console.log(createPassword(8));
 
- function createPassword(length) {
-     let arrayOfElements
-     for(let i = 0; cre)
-     console.log(`---------------Q2----------------`);
- }
- console.log(createPassword(8));
+// function createPassword(
+//     length,
+//     useSmallLetters,
+//     useCapitalLetters,
+//     useSpecialCharacters
+// ) {
+//     const arr = [`A,B,C,D,E,F,G,a,b,c,d,e,f,g,!,@,$,%,&`];
+// }
+// console.log(arr[2]);
+// var arrayChar = [
+//     "A",
+//     "B",
+//     "C",
+//     "D",
+//     "E",
+//     "F",
+//     "G",
+//     "a",
+//     "b",
+//     "c",
+//     "d",
+//     "e",
+//     "f",
+//     "g",
+//     "!",
+//     "@",
+//     "$",
+//     "%",
+//     "&",
+// ];
+// console.log(`---------------Aufgabe 2----------------`);
+// console.log(
+//     arrayChar[1],
+//     arrayChar[10],
+//     arrayChar[13],
+//     arrayChar[4],
+//     arrayChar[14],
+//     arrayChar[4],
+//     arrayChar[10],
+//     arrayChar[16],
+//     arrayChar[9],
+//     arrayChar[4],
+//     arrayChar[15],
+//     arrayChar[7],
+//     arrayChar[2]
+// );
+function createPassword(length) {
+    const arrayChar = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "!",
+        "@",
+        "$",
+        "%",
+        "&",
+    ];
+
+for(let i = 0; i <20;i++){
+    var count = 0;
+    for (var j = 0; j < Math.floor(Math.random() * 20); j++) {
+        count++;
+    }
+    console.log(count);
+}
+
+//     console.log(`---------------Aufgabe 2----------------`);
+//     if (sum >= 9){
+//        console.log("length is good");
+//     return true; 
+//     }else if(sum < 9){
+//         console.log("length is not good");
+//     return false; 
+//     }
+        
+// }console.log(createPassword(length)
 //-------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------
 // Aufgabe 3 (Symmetrischer Unterschied)
@@ -245,7 +330,6 @@ getAllFibonacciNumbersBelow(144) -> [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 
 function getAllFibonacciNumbersBelow(num) {
     console.log(`---------Aufgabe 4/Teil-B--------`);
-
     let fib = [0, 1];
     let data = [];
     for (let i = 2; i <= num; i++) {
@@ -254,5 +338,4 @@ function getAllFibonacciNumbersBelow(num) {
     }
     return data;
 }
-
 console.log(getAllFibonacciNumbersBelow(20));
