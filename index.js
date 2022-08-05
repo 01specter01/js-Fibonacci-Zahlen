@@ -43,25 +43,3 @@ function getAllFibonacciNumbersBelow(num) {
 }
 
 console.log(getAllFibonacciNumbersBelow(20));
-
-function fibonacci(number) {
-    if (number < 2) return number;
-    // 0 if number is 0, 1 if number is 1
-    return fibonacci(number - 1) + fibonacci(number - 2);
-}
-console.log(`---------Teil-Btest--------`);
-console.log(fibonacci(6)); // => 8
-
-let arr = [100, 500, 300, 400, 500, 600, 700, 100, 900, 600];
-
-function numbers(array) {
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        sum += array[i];
-    }
-    return sum / array.length;
-}
-console.log(numbers(arr));
-
-let sentury = Math.floor(Math.random() * 9000);
-console.log(sentury);
