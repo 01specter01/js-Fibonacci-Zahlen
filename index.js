@@ -15,7 +15,7 @@ function getNextFibonacciNumber(prevNum1, prevNum2) {
     let result = prevNum1 + prevNum2;
     return result;
 }
-console.log(getNextFibonacciNumber(5, 8));
+console.log(getNextFibonacciNumber(21, 34));
 
 /*
 Teil B (mittel):
@@ -29,14 +29,20 @@ getAllFibonacciNumbersBelow(10) -> [0, 1, 1, 2, 3, 5, 8]
 getAllFibonacciNumbersBelow(50) -> [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 getAllFibonacciNumbersBelow(144) -> [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 */
-let array = [];
+
 function getAllFibonacciNumbersBelow(num) {
     console.log(`---------Teil-B--------`);
-    for (let i = 0; i < num; i += 3) {
-        return array.push(i);
+
+    let fib = [0, 1];
+    let data = [];
+    for (let i = 2; i <= num; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+        data.push(fib[i]);
     }
+    return data;
 }
-console.log(getAllFibonacciNumbersBelow(10));
+
+console.log(getAllFibonacciNumbersBelow(20));
 
 function fibonacci(number) {
     if (number < 2) return number;
@@ -45,3 +51,17 @@ function fibonacci(number) {
 }
 console.log(`---------Teil-Btest--------`);
 console.log(fibonacci(6)); // => 8
+
+let arr = [100, 500, 300, 400, 500, 600, 700, 100, 900, 600];
+
+function numbers(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum / array.length;
+}
+console.log(numbers(arr));
+
+let sentury = Math.floor(Math.random() * 9000);
+console.log(sentury);
