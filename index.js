@@ -165,9 +165,9 @@ function createPassword() {
         "@",
     ];
 
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < arrayChar.length; i++) {
         var count = 0;
-        for (var j = 0; j < Math.floor(Math.random() * 20); j++) {
+        for (var j = 0; j < Math.floor(Math.random() * arrayChar.length); j++) {
             count++;
         }
 
@@ -188,6 +188,8 @@ createPassword();
 // symmetricDifference([1, 2, 3], [5, 2, 1, 4]) sollte [3, 4, 5] zurückgeben
 // symmetricDifference([1, 2, 3, 3], [5, 2, 1, 4]) sollte [3, 4, 5] zurückgeben
 // symmetricDifference([1, 2, 3], [5, 2, 1, 4, 5]) sollte [3, 4, 5] zurückgeben
+
+console.log(`---------------Aufgabe 3----------------`);
 
 // function symmetricDifference(arr1, difference){
 //     arr1 = [1,2,3,4,5,6,7,8,9],[5,6,7,8,9,10,11,12,13,14,15];
@@ -242,47 +244,47 @@ function getAllFibonacciNumbersBelow(num) {
 }
 console.log(getAllFibonacciNumbersBelow(20));
 
-console.log("1");
-const bankkonto = {
-    kontostand: 1128978,
-    iban: "De75 67750 6887 5776 7758 7686",
-    bankname: "Deutsche Bank",
-    kontoinhaber: "Leo Fibinuchi",
-    abheben: function (betrag) {
-        this.kontostand = this.kontostand - betrag;
-        console.log(
-            `${betrag}€ wurden erfolgreich abgehoben. Der neue Kontostand ist ${this.kontostand}€`
-        );
-    },
-};
-bankkonto.abheben(100000);
+// console.log("1");
+// const bankkonto = {
+//     kontostand: 1128978,
+//     iban: "De75 67750 6887 5776 7758 7686",
+//     bankname: "Deutsche Bank",
+//     kontoinhaber: "Leo Fibinuchi",
+//     abheben: function (betrag) {
+//         this.kontostand = this.kontostand - betrag;
+//         console.log(
+//             `${betrag}€ wurden erfolgreich abgehoben. Der neue Kontostand ist ${this.kontostand}€`
+//         );
+//     },
+// };
+// bankkonto.abheben(100000);
 
-console.log("2");
-const bankkonto2 = {
-    kontostand: 88978,
-    iban: "De75 67750 6887 5776 4858 7686",
-    bankname: "DKB",
-    kontoinhaber: "Max Fibinuchi",
-    einzahlen: function (betrag) {
-        this.kontostand = this.kontostand - betrag;
-        console.log(
-            `${betrag}€ wurden erfolgreich eingezahlt. Der neue Kontostand ist ${this.kontostand}€`
-        );
-    },
-};
-bankkonto2.einzahlen(1000);
+// console.log("2");
+// const bankkonto2 = {
+//     kontostand: 88978,
+//     iban: "De75 67750 6887 5776 4858 7686",
+//     bankname: "DKB",
+//     kontoinhaber: "Max Fibinuchi",
+//     einzahlen: function (betrag) {
+//         this.kontostand = this.kontostand - betrag;
+//         console.log(
+//             `${betrag}€ wurden erfolgreich eingezahlt. Der neue Kontostand ist ${this.kontostand}€`
+//         );
+//     },
+// };
+// bankkonto2.einzahlen(1000);
 
-console.log("3");
+// console.log("3");
 
-const bankkonto3 = {
-    kontostand: 88978,
-    iban: "De75 9950 6887 5776 4858 7446",
-    bankname: "Post Bank",
-    kontoinhaber: "Max Fibinuchi",
-    zeigInfo1: function () {
-        console.log(
-            `Dies ist ein Konto der ${this.bankname}. Die IBAN dieses Kontos lautet ${this.iban}.`
-        );
-    },
-};
-bankkonto3.zeigInfo1();
+// const bankkonto3 = {
+//     kontostand: 88978,
+//     iban: "De75 9950 6887 5776 4858 7446",
+//     bankname: "Post Bank",
+//     kontoinhaber: "Max Fibinuchi",
+//     zeigInfo1: function () {
+//         console.log(
+//             `Dies ist ein Konto der ${this.bankname}. Die IBAN dieses Kontos lautet ${this.iban}.`
+//         );
+//     },
+// };
+// bankkonto3.zeigInfo1();
