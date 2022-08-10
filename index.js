@@ -142,7 +142,7 @@ function getRandom() {
 //__________ERSTELLEN 4 FUNCTIONS LENGTH ALS ERSTE, JEWEILS 3 CHARACTERS ERSTELLEN RANDOM UND AM SCHLUSS ZUSAMMENFÜGEN DAS ALLE 3 CARACTERVARIANTEN VERFÜGT UND LENGTH ZB AUF 9 EINGEHALTEN IST!!!!!!!!!!!!!!!!
 /////////////////
 
-function createPassword(length) {
+function createPassword() {
     const arrayChar = [
         "A",
         "!",
@@ -175,7 +175,7 @@ function createPassword(length) {
     }
 }
 console.log(`---------------Aufgabe 2----------------`);
-console.log(createPassword());
+createPassword();
 
 //-------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------
@@ -189,13 +189,12 @@ console.log(createPassword());
 // symmetricDifference([1, 2, 3, 3], [5, 2, 1, 4]) sollte [3, 4, 5] zurückgeben
 // symmetricDifference([1, 2, 3], [5, 2, 1, 4, 5]) sollte [3, 4, 5] zurückgeben
 
-
-function symmetricDifference(arr1, difference){
-    arr1 = [1,2,3,4,5,6,7,8,9],[5,6,7,8,9,10,11,12,13,14,15];
-    if(arr1[1].)
-let difference = arr1
-.filter(x => !arr2.includes(x))
-.concat(arr2.filter(x => !arr1.includes(x)));
+// function symmetricDifference(arr1, difference){
+//     arr1 = [1,2,3,4,5,6,7,8,9],[5,6,7,8,9,10,11,12,13,14,15];
+//     if(arr1[1].)
+// let difference = arr1
+// .filter(x => !arr2.includes(x))
+// .concat(arr2.filter(x => !arr1.includes(x)));
 //-------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------
 //Teil A (leicht):
@@ -242,3 +241,48 @@ function getAllFibonacciNumbersBelow(num) {
     return data;
 }
 console.log(getAllFibonacciNumbersBelow(20));
+
+console.log("1");
+const bankkonto = {
+    kontostand: 1128978,
+    iban: "De75 67750 6887 5776 7758 7686",
+    bankname: "Deutsche Bank",
+    kontoinhaber: "Leo Fibinuchi",
+    abheben: function (betrag) {
+        this.kontostand = this.kontostand - betrag;
+        console.log(
+            `${betrag}€ wurden erfolgreich abgehoben. Der neue Kontostand ist ${this.kontostand}€`
+        );
+    },
+};
+bankkonto.abheben(100000);
+
+console.log("2");
+const bankkonto2 = {
+    kontostand: 88978,
+    iban: "De75 67750 6887 5776 4858 7686",
+    bankname: "DKB",
+    kontoinhaber: "Max Fibinuchi",
+    einzahlen: function (betrag) {
+        this.kontostand = this.kontostand - betrag;
+        console.log(
+            `${betrag}€ wurden erfolgreich eingezahlt. Der neue Kontostand ist ${this.kontostand}€`
+        );
+    },
+};
+bankkonto2.einzahlen(1000);
+
+console.log("3");
+
+const bankkonto3 = {
+    kontostand: 88978,
+    iban: "De75 9950 6887 5776 4858 7446",
+    bankname: "Post Bank",
+    kontoinhaber: "Max Fibinuchi",
+    zeigInfo1: function () {
+        console.log(
+            `Dies ist ein Konto der ${this.bankname}. Die IBAN dieses Kontos lautet ${this.iban}.`
+        );
+    },
+};
+bankkonto3.zeigInfo1();
